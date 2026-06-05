@@ -230,7 +230,7 @@ $BtnValidar.Add_Click({
 
     try {
         $response = Invoke-RestMethod -Uri "https://api.jsonbin.io/v3/b/$BIN_ID" -Headers $HEADERS -Method GET
-        $keys = $response.record.keys
+        $keys = $response.keys
     } catch {
         $StatusMsg.Text = "Erro ao conectar ao servidor!"
         $StatusMsg.Foreground = "#ff4444"
